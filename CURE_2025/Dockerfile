@@ -25,7 +25,7 @@ RUN chmod +x bin/freebayes-1.3.4-linux-static-AMD64
 # Install snpEFF
 RUN wget -nv http://sourceforge.net/projects/snpeff/files/snpEff_v4_3r_core.zip \
   && unzip snpEff_v4_3r_core.zip && rm snpEff_v4_3r_core.zip
-RUN java -jar ./snpEff/snpEff.jar download hg19
+RUN java -jar ./snpEff/snpEff.jar download GRCh38.86
 
 WORKDIR /app
 ADD . /app
