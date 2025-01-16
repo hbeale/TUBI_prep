@@ -22,5 +22,5 @@ freeBayesSettings="--dont-left-align-indels --pooled-continuous --pooled-discret
 echo Running snpEff on /tmp/mini.vcf
 snpEffSettings="-nodownload -noNextProt -noMotif -noStats -classic -no PROTEIN_PROTEIN_INTERACTION_LOCUS -no PROTEIN_STRUCTURAL_INTERACTION_LOCUS"
 
-java -Xmx10000m -jar /snpEff/snpEff.jar -v $snpEffSettings hg19 /tmp/mini.vcf >  ${outputs}/${output_name}.ann.vcf
+java -Xmx10000m -jar /snpEff/snpEff.jar -v $snpEffSettings GRCh38.86 /tmp/mini.vcf >  ${outputs}/${output_name}.ann.vcf
 
